@@ -1,12 +1,12 @@
 import React from 'react';
 import BookList from './components/BookList';
+import BookForm from './components/BookForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Books</h1>
-      </header>
+      <h1>Book API Client</h1>
+      <BookForm />
       <BookList />
     </div>
   );
