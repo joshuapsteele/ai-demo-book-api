@@ -36,18 +36,22 @@ public class BookServiceTest {
         when(bookRepository.save(book)).thenReturn(book);
 
         Book savedBook = bookService.addBook(book);
+        Book anotherSavedBook = bookService.addBook(book);
 
         assertEquals(book, savedBook);
-        verify(bookRepository, times(1)).save(book);
+        assertEquals(book, anotherSavedBook);
+        verify(bookRepository, times(2)).save(book);
     }
 
     @Test
     public void testRemoveBook() {
         Long bookId = 1L;
+        Long anotherBookId = 2L;
 
         doNothing().when(bookRepository).deleteById(bookId);
 
         bookService.removeBook(bookId);
+        bookService.removeBook(anotherBookId);
 
         verify(bookRepository, times(1)).deleteById(bookId);
     }
@@ -55,16 +59,23 @@ public class BookServiceTest {
     @Test
     public void testFindBookByTitle() {
         String title = "Test Book";
+        String anotherTitle = "Another Test Book";
         List<Book> books = new ArrayList<>();
         Book book = new Book();
         book.setTitle(title);
         book.setAuthor("Test Author");
         books.add(book);
+        Book anotherBook = new Book();
+        anotherBook.setTitle(anotherTitle);
+        anotherBook.setAuthor("Another Test Author");
+        books.add(anotherBook);
 
         when(bookRepository.findAll()).thenReturn(books);
 
         Book foundBook = bookService.findBookByTitle(title);
+        Book anotherFoundBook = bookService.findBookByTitle(anotherTitle);
 
         assertEquals(book, foundBook);
+        assertEquals(anotherBook, anotherFoundBook);
     }
 }
