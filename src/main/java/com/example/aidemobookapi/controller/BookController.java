@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/books")
+@CrossOrigin(origins = "http://localhost:3000")  // React app is served from this origin
 public class BookController {
 
     private final BookService bookService;
