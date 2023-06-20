@@ -1,11 +1,14 @@
 import React from 'react';
 
-const Book = ({ book }) => (
-    <li>
-        <h2>{book.title}</h2>
-        <p>{book.author}</p>
-        <p>{book.year_published}</p>
-    </li>
-);
+const Book = ({ book }) => {
+    return (
+        <tr>
+            <td>{book.id}</td>
+            <td>{book.title}</td>
+            <td>{book.author}</td>
+            <td>{book.yearPublished}</td>
+        </tr>
+    );
+};
 
 export default Book;

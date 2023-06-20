@@ -5,6 +5,7 @@ import com.example.aidemobookapi.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -18,13 +19,20 @@ public class BookService {
     }
 
     public Book addBook(Book book) {
-        // Here you might want to add some business logic like checking if the book already exists
+        // Check if the book already exists. If it does, then do not save the book to the database and return the book that already exists.
+        
+
+
         return bookRepository.save(book);
     }
 
     public void removeBook(Long id) {
         // Here you might want to add some business logic like checking if the book exists before deleting
         bookRepository.deleteById(id);
+    }
+
+    public List<Book> findAllBooks() {
+        return bookRepository.findAll();
     }
 
     public Book findBookByTitle(String title) {
