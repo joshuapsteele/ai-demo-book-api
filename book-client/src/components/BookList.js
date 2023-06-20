@@ -8,10 +8,17 @@ const BookList = () => {
 
     useEffect(() => {
         BookService.getAllBooks()
-            .then(response => setBooks(response.data))
+            .then(response => {
+                const uniqueBooks = response.data.filter((book, index, self) =>
+                    index === self.findIndex((b) => (
+                        b.title === book.title && b.author === book.author && b.yearPublished === book.yearPublished
+                    ))
+                );
+                setBooks(uniqueBooks);
+            })
             .catch(error => console.error);
     }, []);
-
+    
     const sortBooks = (key) => {
         let direction = 'ascending';
         if (sortConfig.key === key && sortConfig.direction === 'ascending') {
