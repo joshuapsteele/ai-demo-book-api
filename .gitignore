@@ -17,5 +17,3 @@ buildNumber.properties
 .classpath
 
 .DS_Store
-
-package-lock.json
