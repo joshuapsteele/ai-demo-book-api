@@ -37,7 +37,7 @@ public class BookController {
     }
 
     @GetMapping(params = "title")
-    public ResponseEntity<Book> findBookByTitle(@RequestParam("title") String title) {
+    public ResponseEntity<Book> findBookByTitle(@RequestParam (name = "title") String title) {
         Book book = bookService.findBookByTitle(title);
         return new ResponseEntity<>(book, HttpStatus.OK);
     }
