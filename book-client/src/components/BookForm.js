@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import BookService from '../services/BookService';
 
 function BookForm() {
@@ -30,15 +30,15 @@ function BookForm() {
         <form onSubmit={handleSubmit} className="book-form">
             <label>
                 Title:
-                <input type="text" value={title} onChange={e => setTitle(e.target.value)} required />
+                <input type="text" value={title} onChange={e => setTitle(e.target.value)} required/>
             </label>
             <label>
                 Author:
-                <input type="text" value={author} onChange={e => setAuthor(e.target.value)} required />
+                <input type="text" value={author} onChange={e => setAuthor(e.target.value)} required/>
             </label>
             <label>
                 Year Published:
-                <input type="number" value={yearPublished} onChange={e => setYearPublished(e.target.value)} required />
+                <input type="number" value={yearPublished} onChange={e => setYearPublished(e.target.value)} required/>
             </label>
             <button type="submit">Add Book</button>
         </form>

@@ -9,10 +9,12 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class BookServiceTest {
 
@@ -82,8 +84,8 @@ public class BookServiceTest {
     @Test
     public void testFindAllBooks() {
         List<Book> expectedBooks = List.of(
-            new Book("Test Book", "Author", 1998),
-            new Book("Another Test Book", "Author", 1999)
+                new Book("Test Book", "Author", 1998),
+                new Book("Another Test Book", "Author", 1999)
         );
         when(bookRepository.findAll()).thenReturn(expectedBooks);
 

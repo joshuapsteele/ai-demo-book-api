@@ -1,95 +1,95 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f4f4f4;
-  color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f4f4f4;
+    color: #333;
 }
 
 h2 {
-  color: #333;
-  text-align: center;
+    color: #333;
+    text-align: center;
 }
 
 .book-list {
-  margin: 0 auto;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 thead {
-  background: #333;
-  color: #fff;
+    background: #333;
+    color: #fff;
 }
 
 thead th {
-  padding: 10px;
+    padding: 10px;
 }
 
 tbody td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
 }
 
 tbody tr:nth-child(even) {
-  background: #f4f4f4;
+    background: #f4f4f4;
 }
 
 .book-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 .book-form label {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 10px;
-  font-size: 0.9em;
-  color: #333;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #333;
 }
 
 .book-form input {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
 }
 
 .book-form button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  background: #333;
-  cursor: pointer;
-  font-size: 1em;
-  margin-top: 20px;
-  transition: all 0.3s ease-in
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background: #333;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    transition: all 0.3s ease-in
 }
 
 .sortable {
-  cursor: pointer;
-  color: #ffffff;
-  transition: color 0.3s;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s;
 }
 
 .sortable:hover {
-  color: #007bff;
-  text-decoration: underline;
+    color: #007bff;
+    text-decoration: underline;
 }
