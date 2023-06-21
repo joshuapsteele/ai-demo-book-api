@@ -27,7 +27,7 @@ function BookForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="book-form">
             <label>
                 Title:
                 <input type="text" value={title} onChange={e => setTitle(e.target.value)} required />

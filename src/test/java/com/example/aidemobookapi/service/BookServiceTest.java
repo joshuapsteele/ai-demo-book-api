@@ -78,4 +78,17 @@ public class BookServiceTest {
         assertEquals(book, foundBook);
         assertEquals(anotherBook, anotherFoundBook);
     }
+
+    @Test
+    public void testFindAllBooks() {
+        List<Book> expectedBooks = List.of(
+            new Book("Test Book", "Author", 1998),
+            new Book("Another Test Book", "Author", 1999)
+        );
+        when(bookRepository.findAll()).thenReturn(expectedBooks);
+
+        List<Book> actualBooks = bookService.findAllBooks();
+
+        assertEquals(expectedBooks, actualBooks);
+    }
 }

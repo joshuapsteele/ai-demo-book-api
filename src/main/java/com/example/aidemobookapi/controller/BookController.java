@@ -2,6 +2,9 @@ package com.example.aidemobookapi.controller;
 
 import com.example.aidemobookapi.domain.Book;
 import com.example.aidemobookapi.service.BookService;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +26,14 @@ public class BookController {
     public ResponseEntity<Book> addBook(@RequestBody Book book) {
         Book savedBook = bookService.addBook(book);
         return new ResponseEntity<>(savedBook, HttpStatus.CREATED);
+    }
+
+    // Find all books
+
+    @GetMapping
+    public ResponseEntity<List<Book>> findAllBooks() {
+        List<Book> books = bookService.findAllBooks();
+        return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
     @GetMapping(params = "title")
