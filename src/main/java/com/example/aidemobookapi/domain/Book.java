@@ -24,8 +24,6 @@ public class Book {
         this.yearPublished = yearPublished;
     }
 
-    // Getters and setters
-
     public Long getId() {
         return id;
     }
